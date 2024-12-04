@@ -47,7 +47,7 @@
                 BareMux.SetTransport("EpxMod.EpoxyClient", { wisp: wispUrl })
             }
             if (transport === "bare") {
-                BareMux.SetTransport("BareMod.BareClient", window.location.origin + "/bare/");
+                BareMux.SetTransport("BareMod.BareClient","https://iproxy.apps.lilleycloud.com/bare/");
             }
             resolve();
         })
