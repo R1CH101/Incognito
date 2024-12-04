@@ -42,7 +42,7 @@
     window.setTransport = function(transport: string) {
         return new Promise<void>((resolve) => {
             localStorage.setItem("incog||transport", transport);
-            const wispUrl = (location.protocol === "https:" ? "wss://" : "ws://") + location.host + "/wisp/";
+            const wispUrl = (location.protocol === "https:" ? "wss://" : "ws://") + "iproxy.apps.lilleycloud.com/wisp/";
             if (transport === "epoxy") {
                 BareMux.SetTransport("EpxMod.EpoxyClient", { wisp: wispUrl })
             }
