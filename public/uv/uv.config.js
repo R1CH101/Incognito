@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '',
+    prefix: '/~/uv/',
     bare: '/bare/',
     encodeUrl: function encode(str) {
         if (!str) return str;
