@@ -38,7 +38,7 @@ import FrameManager from '@components/FrameManager.astro';
             }
             const iframe = document.getElementById("iframe") as HTMLIFrameElement;
             const frameManager = document.getElementById("framemanager") as HTMLElement;
-            frameManager.classList.remove("hidden");
+        
             iframe.classList.remove("hidden");
             iframe.src = url as string || "/load";
             if (!iframe) {
