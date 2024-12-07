@@ -5,7 +5,7 @@
         return new Promise<void>((resolve) => {
             const search = document.createElement('script');
             search.src = "/search.js";
-            search.defer = true;
+            search.defer = false;
             document.body.appendChild(search);
             const epoxyScript = document.createElement('script');
             epoxyScript.src = '/epoxy/index.js';
