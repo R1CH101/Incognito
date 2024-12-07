@@ -9,7 +9,7 @@ self.__uv$config = {
                 .split('')
                 .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 3) : char))
                 .join('')
-                .replaceAll(/\//g, "----");
+                .replaceAll(/\//g, "----")
         );
     },
     decodeUrl: function decode(str) {
@@ -18,7 +18,7 @@ self.__uv$config = {
 
         return (
             decodeURIComponent(input)
-                .replaceAll("----",/\//g);
+                .replaceAll("----",/\//g)
             .split('')
                 .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 3) : char))
                 .join('') + (search.length ? '?' + search.join('?') : '')
