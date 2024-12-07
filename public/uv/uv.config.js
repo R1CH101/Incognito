@@ -3,14 +3,14 @@ self.__uv$config = {
     bare: 'https://iproxy.apps.lilleycloud.com/bare/',
     encodeUrl: function encode(str) {
         if (!str) return str;
-        return encodeURIComponent(btoa(str.toString()));
+        return encodeURIComponent(str.toString());
     },
     decodeUrl: function decode(str) {
         if (!str) return str;
         let [input, ...search] = str.split('?');
 
         return (
-            decodeURIComponent(atob(input))
+            decodeURIComponent(input)
         );
     },
     handler: '/uv/uv.handler.js',
