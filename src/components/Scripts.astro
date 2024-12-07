@@ -3,6 +3,10 @@
     //Usage: await window.loadProxyScripts or window.loadProxyScript.then(() => {})
     window.loadProxyScripts = function() {
         return new Promise<void>((resolve) => {
+            const search = document.createElement('script');
+            search.src = "/search.js";
+            search.defer = true;
+            document.body.appendChild(search);
             const epoxyScript = document.createElement('script');
             epoxyScript.src = '/epoxy/index.js';
             epoxyScript.defer = true;
@@ -23,10 +27,7 @@
             bareMux.src = '/baremux/bare.cjs';
             bareMux.defer = true;
             document.body.appendChild(bareMux);
-            const search = document.createElement('script');
-            search.src = "/search.js";
-            search.defer = true;
-            document.body.appendChild(search);
+            
             const checkScripts = setInterval(() => {
                 //If both of these aren't defined this will repeat until they are
                 //this allows use to wait for all of the scripts to be ready *before* we setup the serviceworker
