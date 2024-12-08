@@ -62,7 +62,7 @@ import FrameManager from '@components/FrameManager.astro';
             try {
                 if (link) {
                     initServiceWorker().then(() => {
-                        prox(__uv$config!.prefix + link);
+                        prox(link);
                         history.pushState({}, "", "/");
                     })
                 }
