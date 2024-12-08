@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/~/uv/',
-    bare: '/bare/',
+    bare: 'https://iproxy.apps.lilleycloud.com/bare/',
     encodeUrl: function encode(str) {
         if (!str) return str;
         return encodeURIComponent(
