@@ -3,7 +3,7 @@ self.__uv$config = {
     bare: 'https://iproxy.apps.lilleycloud.com/bare/',
     encodeUrl: function encode(str) {
         if (!str) return str;
-        return encodeURIComponent(str.toString().replaceAll("/","----");
+        return encodeURIComponent(str.toString().replaceAll("/","----"));
     },
     decodeUrl: function decode(str) {
         if (!str) return str;
